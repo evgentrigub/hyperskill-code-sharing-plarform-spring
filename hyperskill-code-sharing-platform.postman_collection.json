@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "13840f2a-2229-40ac-926f-ba2381d987f8",
+		"name": "hyperskill-code-sharing-platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4822792"
+	},
+	"item": [
+		{
+			"name": "REST Code New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\":\"aaa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/code/new",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"code",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST Get Code",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/code/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"code",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST Get latest code snippets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/code/latest",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"code",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/code/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"code",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/code/new",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"code",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get latest code snippets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/code/latest",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"code",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8889",
+			"type": "string"
+		}
+	]
+}
